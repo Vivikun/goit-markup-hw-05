@@ -62,7 +62,14 @@
       <section class="hedline-button">
         <div class="container">
           <h1 class="headline">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button class="button" type="button">Zamów usługę</button>
+          <button class="button modal-winow" type="button" data-modal-open>
+            Zamów usługę
+          </button>
+        </div>
+        <div class="background is-hidden" data-modal>
+          <div class="backdrop">
+            <button class="modal" type="button" data-modal-close>x</button>
+          </div>
         </div>
       </section>
       <section>
@@ -491,5 +498,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
