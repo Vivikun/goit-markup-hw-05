@@ -56,6 +56,7 @@ section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 /*-------------------- okno modalne ---------------------*/
 
 .background {
@@ -70,18 +71,28 @@ section {
   position: relative;
   width: 528px;
   height: 581px;
-  left: 536px;
   top: 221px;
+  margin: 0 auto;
   background: var(--color-text);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition-property: transform;
-  transition-duration: 2s;
-  transition-delay: 0;
-  transition-timing-function: ease-out;
-  transform: rotate(260deg);
+  animation: animate 3000ms 2 1000ms;
 }
+@keyframes animate {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(120deg) translate(-250px, -200px);
+  }
+
+  100% {
+    transform: rotate(-40deg) translate(0, 0);
+  }
+}
+
 .modal {
   position: absolute;
   width: 30px;
@@ -101,6 +112,7 @@ section {
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .modal:hover {
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -111,6 +123,7 @@ section {
   visibility: hidden;
   pointer-events: none;
 }
+
 /*-------------------- koniec okna modalnego--------------------*/
 
 .footer-div {
@@ -142,11 +155,17 @@ section {
   background: var(--color);
   border-radius: 50%;
   fill: var(--color-text);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon:focus {
   background: var(--color);
   border-radius: 50%;
   fill: var(--color-text);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .headline-5 {
@@ -200,10 +219,16 @@ section {
 .secondary-item:hover {
   border-color: var(--color);
   fill: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .secondary-item:focus {
   border-color: var(--color);
   fill: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-name-icon {
@@ -224,10 +249,16 @@ section {
 .list-icon:hover {
   background: var(--color);
   fill: var(--color-text);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-icon:focus {
   background: var(--color);
   fill: var(--color-text);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
@@ -236,18 +267,35 @@ section {
   padding: 0 15px;
 }
 
-.list {
-  list-style: none;
-}
-
 .hero {
   display: flex;
   align-items: center;
 }
 .link-nav {
+  position: relative;
   width: 254px;
   display: flex;
   gap: 46px;
+}
+.wrap-link::after {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  content: "";
+  width: 53px;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+}
+.wrap-nav::after {
+  position: absolute;
+  top: 44px;
+  left: 99px;
+  content: "";
+  width: 58px;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
 }
 
 .list-mail {
@@ -271,9 +319,15 @@ section {
 
 .link:focus {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:hover {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo {
@@ -290,9 +344,15 @@ section {
 
 .logo:focus {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo:hover {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-item {
@@ -312,9 +372,15 @@ section {
 
 .mail:focus {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail:hover {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hedline-button {
@@ -378,11 +444,17 @@ section {
   background-color: var(--color);
   color: var(--color-body);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover {
   background-color: var(--color);
   color: var(--color-body);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-lorem {
@@ -421,8 +493,29 @@ section {
 }
 
 .nick-name {
+  position: relative;
+  list-style: none;
   display: flex;
   gap: 30px;
+  mix-blend-mode: normal;
+}
+
+.text-image {
+  position: absolute;
+  top: 224px;
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 .headline-3 {
@@ -485,10 +578,16 @@ section {
 
 .link-0:hover {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-0:focus {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-1 {
@@ -503,9 +602,15 @@ section {
 
 .mail-1:focus {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail-1:hover {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-0 {
@@ -521,9 +626,15 @@ section {
 
 .logo-0:focus {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-0:hover {
   color: var(--color);
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-footer {
@@ -559,6 +670,9 @@ section {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  transition-property: var(--color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-1:hover {
   background-color: var(--color);
@@ -566,6 +680,9 @@ section {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  transition-property: var(--color), box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-1 {
@@ -575,6 +692,12 @@ section {
   /* identical to box height, or 200% */
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+  z-index: 2;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 .basic-text-1 {
@@ -582,7 +705,7 @@ section {
   font-size: 16px;
   line-height: 1.9;
   /* identical to box height, or 188% */
-
+  z-index: 2;
   letter-spacing: 0.03em;
   color: var(--color-back);
 }
@@ -616,26 +739,65 @@ section {
 }
 
 .subtext {
+  position: relative;
+  top: 0;
   padding-bottom: 20px;
   padding-top: 20px;
   border: 1px solid var(--color-border);
   border-top: 0;
   padding-left: 24px;
+  background: var(--color-text);
+  z-index: 2;
 }
 
 .item {
+  position: relative;
   max-width: 370px;
   max-height: 404px;
 }
 .basic-item {
+  position: relative;
   display: block;
   color: inherit;
+  overflow: hidden;
+}
+.basic-item:hover .text-basic-item {
+  transform: translateY(0);
 }
 .basic-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .basic-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-basic-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 45px;
+  width: 370px;
+  height: 294px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition: transform 250ms ease;
 }
