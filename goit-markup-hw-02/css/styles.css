@@ -146,6 +146,9 @@ section {
   border-radius: 50%;
   background-color: var(--color-bacgound-footer);
   fill: var(--color-text);
+  transition-property: color, background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon:not(:last-child) {
   margin-right: 10px;
@@ -209,6 +212,9 @@ section {
   align-items: center;
   justify-content: center;
   fill: var(--color-icone);
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .secondary-item:hover {
   border-color: var(--color);
@@ -233,6 +239,9 @@ section {
   height: 44px;
   fill: var(--color-icone);
   border-radius: 50%;
+  transition-property: color, background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-icon:hover {
   background: var(--color);
@@ -412,7 +421,7 @@ section {
   padding-top: 10px;
   padding-bottom: 10px;
   border: none;
-  transition-property: color, box-shadow;
+  transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -473,7 +482,7 @@ section {
 
 .text-image {
   position: absolute;
-  top: 224px;
+  bottom: 0px;
   color: var(--color-text);
   font-weight: 700;
   font-size: 14px;
@@ -719,6 +728,9 @@ figure {
   display: block;
   color: inherit;
   overflow: hidden;
+  transition-property: color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .basic-item:hover .text-basic-item {
   transform: translateY(0);
@@ -726,16 +738,10 @@ figure {
 .basic-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .basic-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-basic-item {
